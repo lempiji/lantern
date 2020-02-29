@@ -1,0 +1,15 @@
+.dub
+docs.json
+__dummy.html
+docs/
+/lantern
+lantern.so
+lantern.dylib
+lantern.dll
+lantern.a
+lantern.lib
+lantern-test-*
+*.exe
+*.o
+*.obj
+*.lst

@@ -1,0 +1,6 @@
+name "lantern"
+description "Compute basic statistics for an array of objects.."
+authors "lempiji"
+license "MIT"
+dependency "east_asian_width" version="~>1.0.0"
+dependency "mir-algorithm" version="~>3.7.17"
