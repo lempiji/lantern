@@ -131,7 +131,7 @@ unittest
 
 unittest
 {
-    import std.math : approxEqual;
+    import std.math : isClose;
     import std.conv : to;
 
     NumericAggregator!int aggregator;
@@ -142,7 +142,7 @@ unittest
     static assert(is(typeof(result) == typeof(aggregator).Result));
     assert(result.count == 5);
     assert(result.mean == 3);
-    assert(approxEqual(result.std.get, 1.581139), result.std.get.to!string);
+    assert(isClose(result.std.get, 1.581139, 1e-5), result.std.get.to!string);
     assert(result.min == 1, result.min.to!string());
     assert(result.p25 == 2, result.p25.to!string());
     assert(result.p50 == 3, result.p50.to!string());
@@ -152,7 +152,7 @@ unittest
 
 unittest
 {
-    import std.math : approxEqual;
+    import std.math : isClose;
     import std.conv : to;
 
     NumericAggregator!int aggregator;
@@ -163,7 +163,7 @@ unittest
     static assert(is(typeof(result) == typeof(aggregator).Result));
     assert(result.count == 6);
     assert(result.mean == 3.5);
-    assert(approxEqual(result.std.get, 1.870829));
+    assert(isClose(result.std.get, 1.870829, 1e-5));
     assert(result.min == 1, result.min.to!string());
     assert(result.p25 == 2.25, result.p25.to!string());
     assert(result.p50 == 3.5, result.p50.to!string());
@@ -215,7 +215,7 @@ unittest
 unittest
 {
     import core.time;
-    import std.math : approxEqual;
+    import std.math : isClose;
 
     DurationAggregator!Duration aggregator;
 
